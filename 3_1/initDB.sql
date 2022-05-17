@@ -24,6 +24,8 @@ level varchar(50),
 primary key (skill_id),
 check (level in ('junior', 'middle', 'senior'))
 ); 
+alter table skills
+modify column level varchar(50) not null;
 create table developers_skills (
 developer_id int not null,
 skill_id int not null,
